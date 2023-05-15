@@ -1,0 +1,182 @@
+
+<html>
+
+<head>
+  <style>
+    body {
+
+      background-image: url("https://spaces.w3schools.com/images/KRELIShKxTM.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      -webkit-box-shadow: inset 0px 0px 300px 0px rgba(255, 255, 255, 0.3);
+      -moz-box-shadow: inset 0px 0px 3000px 2000px rgba(255, 255, 255, 0.3);
+      box-shadow: inset 0px 0px 300px 2000px rgba(255, 255, 255, 0.8);
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+      color: darkblue;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #2554cc;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #009afa;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .box {
+      background-image: linear-gradient(to top, rgba(0, 0, 0, 0.3)50%, rgba(0, 0, 0, 0.3)50%);
+      background-size: contain;
+      width: 210px;
+      height: 200px;
+      border: 2px solid #ccc;
+      padding: 50px;
+      border-radius: 10px;
+
+
+    }
+
+    form {
+      font-family: "Quicksand", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    input[type="submit"] {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    select {
+      display: block;
+      margin-bottom: 20px;
+      width: 75%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 16px;
+    }
+
+    .content-box {
+      border: 3px solid black;
+      background-color: antiquewhite;
+      border-radius: 10px;
+      padding: 20px;
+      width: 60%;
+      margin: auto;
+
+    }
+  </style>
+</head>
+<br /><br /><br /><br /><br />
+<div class="container">
+
+  <div class="box">
+
+    <form>
+      <label for="domain">Select your domain</label>
+      <select id="domain" name="domain">
+        <option value="Engineering">Engineering</option>
+        <option value="Medical">Medical</option>
+        <option value="Law">Law</option>
+        <option value="Agriculture">Agriculture</option>
+      </select>
+
+      <label for="region">Your region</label>
+      <select id="region" name="region">
+        <option value="North India">North India</option>
+        <option value="South India">South India</option>
+
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.querySelector('form');
+
+    function handleSubmit(event) {
+      event.preventDefault();
+      const domain = form.domain.value;
+      const region = form.region.value;
+
+
+      if (domain === 'Engineering' && region === 'North India') {
+        window.location.href = 'file:///C:/Users/Admin/eng1.html';
+      } else if (domain === 'Engineering' && region === 'South India') {
+        window.location.href = 'file:///C:/Users/Admin/ENG2.html';
+      } else if (domain === 'Medical' && region === 'North India') {
+        window.location.href = 'file:///C:/Users/Admin/med1.html';
+      } else if (domain === 'Medical' && region === 'South India') {
+        window.location.href = 'file:///C:/Users/Admin/MED2.HTML';
+      } else if (domain === 'Law' && region === 'North India') {
+        window.location.href = 'file:///C:/Users/Admin/LAW1.HTML';
+      } else if (domain === 'Law' && region === 'South India') {
+        window.location.href = 'file:///C:/Users/Admin/Desktop/college/law2.html';
+      } else if (domain === 'Agriculture' && region === 'North India') {
+        window.location.href = 'file:///C:/Users/Admin/agri1.html';
+      } else if (domain === 'Agriculture' && region === 'South India') {
+        window.location.href = 'file:///C:/Users/Admin/AGRI2.html';
+      }
+
+    }
+
+    form.addEventListener('submit', handleSubmit);
+  </script>
+
+
+
+</div>
+</body>
+
+</html>
